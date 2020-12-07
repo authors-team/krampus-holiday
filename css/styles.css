@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "ChristmasCardFont";
+  src: url("/assets/fonts/chrici__-webfont.woff") format("woff")
+  }
+
+body {
+    background: #005cd4;   
+  }
+  
+  .main {
+    width: 100%;
+    height:99vh;
+    
+     border: 20px solid transparent;
+      box-sizing: border-box;
+      padding: 20px;
+    border-image: url('/assets/krampus-border.png') 20 round;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: #666666;
+    text-align: center;
+    font-size: 1.5rem;
+   
+
+  }
+
+  .flashDark {
+    top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+  position:absolute;
+  /* background-color: #222222 ; */
+  animation:flash 5s linear infinite; 
+  }
+
+  @keyframes flash{ 
+    0%,  83%,  91%, 96%, 97% {background-color:transparent; opacity: 0;}
+    84%, 90%, 93%, 95%, 98%, 100% {background-color:#222222; opacity: 1;} 
+  }
+
+  .krampusImg {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    position: relative;
+    z-index: 50;
+  }
+
+  .subtitle {
+    color: #99b9a7;
+    text-shadow: 0px 2px 2px #1a1a1a;
+  }
+  
+  .title1 {
+    font-family: 'ChristmasCardFont', Times, serif;
+    font-weight: 300;
+    margin-top: -1rem;
+    font-size: 8rem;
+    position: relative;
+    z-index: inherit;
+    line-height: .5rem;
+      color: #ffffff;
+      text-shadow: 0px 2px 2px #1a1a1a;
+  }
+  .title2 {
+    font-family: 'ChristmasCardFont', Times, serif;
+    font-weight: 300;
+    position: relative;
+    margin-top: -1.25rem;
+    z-index: 45;
+    font-size: 7rem;
+    line-height: .5rem;
+    color: #ff7c7c;
+    text-shadow: 0px 2px 2px #1a1a1a;
+  }
+  
+  .main::before {
+    content: "";
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1295275/background-noise.png'); */
+    background: url('/assets/paper002_transparent.png');
+    background-blend-mode: screen;
+
+    opacity: .4;
+    animation: 3s step-end infinite noise;
+    pointer-events: none;
+  }
+  @keyframes noise {
+    0%, 100% {
+      background-position: 0 0;
+    }
+    10% {
+      background-position: -5% -10%;
+    }
+    20% {
+      background-position: -15% 5%;
+    }
+    30% {
+      background-position: 7% -25%;
+    }
+    40% {
+      background-position: 20% 25%;
+    }
+    50% {
+      background-position: -25% 10%;
+    }
+    60% {
+      background-position: 15% 5%;
+    }
+    70% {
+      background-position: 0% 15%;
+    }
+    80% {
+      background-position: 25% 35%;
+    }
+    90% {
+      background-position: -10% 10%;
+    }
+  }
+
+  .snow{ background: none; 
+    height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index:10; }
+
+  
+  /* @keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  } */
