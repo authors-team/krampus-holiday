@@ -10,15 +10,20 @@ body {
 
 a {
   text-decoration: none;
+  cursor: url("/assets/Cursor.png"), auto;
+  color: #ff7c7c;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .main {
   width: 100%;
-  height: 99vh;
+  min-height: 99vh;
 
   border: 20px solid transparent;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 20px 20px 100px 20px;
   /* border-image: url('/assets/krampus-border.png') 20 round; */
   display: flex;
   justify-content: center;
@@ -27,9 +32,9 @@ a {
   text-align: center;
   font-size: 1.5rem;
 
-  background-size: auto 25%;
+  background-size: auto 30%;
   background-repeat: repeat-x;
-  background-position: right 0px bottom -50px;
+  background-position: right 0px bottom -100px;
 
   background-image: url("/assets/DarkTown.png");
 }
@@ -90,7 +95,7 @@ a {
 .links {
   font-family: inherit;
   text-align: center;
-  padding: 40px 20px;
+  padding: 10px 20px;
   max-width: 30rem;
   margin: auto;
 }
@@ -105,7 +110,7 @@ a {
   letter-spacing: 0.1rem;
   margin: 0 0.1em 0.1em 0;
   border: 0.16em solid rgba(255, 255, 255, 0);
-  border-radius: 2em;
+  border-radius: 0.5em;
   box-sizing: border-box;
 }
 
@@ -116,10 +121,19 @@ a {
 } */
 
 .mainButton:hover {
-  border-color: #c3e4e4;
-  cursor: pointer;
+  border-color: #ff7c7c;
+  cursor: url("/assets/Cursor.png"), auto;
   position: relative;
   color: #ff7c7c;
+  background-color: #141414;
+  text-decoration: none !important;
+}
+.instagram {
+  background-color: #88202d;
+}
+
+.facebook {
+  background-color: #205688;
 }
 #fire1 {
   display: none;
@@ -147,7 +161,7 @@ a {
   top: -90px;
   left: 0;
   right: 0;
-  z-index: -10;
+  z-index: -1;
 }
 /* .mainButton:hover:after {
   content: "";
@@ -171,7 +185,8 @@ a {
 .content {
   position: relative;
   z-index: 50;
-  padding-top: 10%;
+  padding-top: 5%;
+  width: 100%;
 }
 
 .subtitle {
@@ -222,6 +237,25 @@ a {
   color: #c3e4e4;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+  .poemSection {
+    padding: 0px 20px;
+  }
+  .poem {
+    font-size: 0.9rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #c3e4e4;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
 }
 .main::before {
   content: "";
