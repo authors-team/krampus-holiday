@@ -1,4 +1,21 @@
 (function() {
+
+	var fire1 = bodymovin.loadAnimation({
+		container: document.getElementById("fire1"),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: "./assets/fire.json"
+	})
+
+	var fire2 = bodymovin.loadAnimation({
+		container: document.getElementById("fire2"),
+		renderer: 'svg',
+		loop: true,
+		autoplay: true,
+		path: "./assets/fire.json"
+	})
+
 	function ready(fn) {
 		if (document.readyState != 'loading'){
 			fn();
@@ -45,7 +62,7 @@
 		
 		function updateParticles() {
 			ctx.clearRect(0, 0, width, height);
-			ctx.fillStyle = '#f6f9fa';
+			ctx.fillStyle = '#666666';
 			
 			particles.forEach(function(particle) {
 				particle.y += particle.dy;
