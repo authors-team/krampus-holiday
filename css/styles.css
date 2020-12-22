@@ -118,6 +118,7 @@ a:hover {
 }
 
 .qrCode img {
+  max-width: 150px;
   margin: 0 0.1em 0.1em 0;
   border: 0.16em solid rgba(255, 255, 255, 0);
   border-color: #ff7c7c;
@@ -156,15 +157,8 @@ a:hover {
   border: 0.16em solid rgba(255, 255, 255, 0);
   /* border-radius: 0.5em; */
   box-sizing: border-box;
-  display: none;
   box-shadow: 0 4px 15px 0 rgba(202, 110, 83, 0.75);
-}
-
-@media only screen and (max-width: 1200px) {
-  .mainButton {
-    margin-bottom: 10px;
-    display: block;
-  }
+  margin-bottom: 10px;
 }
 
 /* .fireHover {
