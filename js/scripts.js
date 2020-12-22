@@ -118,3 +118,10 @@ function playAudio() {
 		image.src = "/assets/unmuted.png"
 	}
 }
+
+function onVisibilityChange() {
+	var audio = document.getElementById("bgMusic");
+	return document.hidden ? audio.pause() : audio.play()
+}
+
+document.addEventListener("visibilitychange", onVisibilityChange)
