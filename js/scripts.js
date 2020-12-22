@@ -1,5 +1,12 @@
 (function() {
 
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	};
+
+	// qrCode = document.getElementById('qrCode');
+
+
 	var fire1 = bodymovin.loadAnimation({
 		container: document.getElementById("fire1"),
 		renderer: 'svg',

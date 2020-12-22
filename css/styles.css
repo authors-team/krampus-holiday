@@ -117,6 +117,26 @@ a:hover {
   margin: auto;
 }
 
+.qrCode img {
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-color: #ff7c7c;
+  /* border-radius: 0.5em; */
+  box-sizing: border-box;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  box-shadow: 0 4px 15px 0 rgba(202, 110, 83, 0.75);
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .qrCode {
+    display: none;
+  }
+}
+
 .mainButton {
   padding: 0.8rem 1.5rem;
   text-decoration: none;
@@ -129,6 +149,14 @@ a:hover {
   border: 0.16em solid rgba(255, 255, 255, 0);
   /* border-radius: 0.5em; */
   box-sizing: border-box;
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainButton {
+    margin-bottom: 10px;
+    display: block;
+  }
 }
 
 /* .fireHover {
