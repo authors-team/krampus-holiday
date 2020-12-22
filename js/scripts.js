@@ -7,9 +7,6 @@
 	// qrCode = document.getElementById('qrCode');
 	var audio = document.getElementById("bgMusic");
 	audio.muted = true;
-	audio.play();
-	audio.muted = false;
-	console.log("playing")
 
 	var fire1 = bodymovin.loadAnimation({
 		container: document.getElementById("fire1"),
@@ -109,10 +106,11 @@
 	});
 })();
 
-function muteAudio() {
+function playAudio() {
 	var audio = document.getElementById("bgMusic");
 	console.log(audio.muted);
 	audio.muted = !audio.muted;
+	audio.play();
 	var image = document.getElementById("muteButton");
 	if(audio.muted) {
 		image.src = "/assets/muted.png"
