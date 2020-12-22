@@ -227,6 +227,13 @@ a:hover {
 
   /* text-shadow: 0px 2px 2px #1a1a1a; */
 }
+.subtitle2 {
+  font-family: "ChristmasCardFont", Times, serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+
+  /* text-shadow: 0px 2px 2px #1a1a1a; */
+}
 
 .title1 {
   font-family: "ChristmasCardFont", Times, serif;
@@ -275,6 +282,11 @@ a:hover {
   border-bottom-left-radius: 15px 255px;
 }
 @media only screen and (max-width: 768px) {
+  .controlButton {
+    margin: 8px;
+    width: 32px;
+    z-index: 100;
+  }
   .main {
     background-size: auto 18%;
     background-repeat: repeat-x;
@@ -282,8 +294,13 @@ a:hover {
   }
   .subtitle {
     letter-spacing: 0.1em;
-    color: #c3e4e4;
     font-size: 1rem;
+    /* text-shadow: 0px 2px 2px #1a1a1a; */
+  }
+  .subtitle2 {
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
     /* text-shadow: 0px 2px 2px #1a1a1a; */
   }
 
