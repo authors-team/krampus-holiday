@@ -11,6 +11,16 @@
   </head>
 
   <body>
+    <audio id="bgMusic" autoplay="autoplay" loop="true">
+      <source src="/assets/Krampus Chill.mp3" type="audio/mp3" />
+    </audio>
+
+    <img
+      src="/assets/unmuted.png"
+      onclick="muteAudio();"
+      class="controlButton"
+      id="muteButton"
+    />
     <div class="aboutButtons"></div>
     <div class="flashDark">
       <img
@@ -25,30 +35,31 @@
       <canvas class="snow" id="snow"></canvas>
 
       <div class="content">
-        <h3 class="subtitle">A Very</h3>
+        <h3 class="subtitle light">A Very</h3>
         <h1 class="title1">Krampus</h1>
-        <h1 class="title2">Holiday</h1>
+        <h1 class="title2 red">Holiday</h1>
+        <h3 class="subtitle red">An Interactive Instagram Experience</h3>
         <div class="links">
           <div class="flex">
             <a
               href="https://www.instagram.com/ar/109757470920402"
               target="_blank"
             >
-              <div class="mainButton instagram">
+              <div class="mainButton instagram handDrawn">
                 <div id="fire1"></div>
-                View on Instagram
+                Click...If You Dare
               </div>
             </a>
-            <a href="" target="_blank"
+            <!-- <a href="" target="_blank"
               ><div class="mainButton facebook">
                 <div id="fire2"></div>
 
                 View on Facebook
               </div></a
-            >
+            > -->
           </div>
         </div>
-        <div class="poemSection">
+        <div class="poemSection light">
           <p class="poem">
             Listen up children or do pay the price. <br />
             A creature is lurking who turns day to night.<br />

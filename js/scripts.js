@@ -96,3 +96,15 @@
 		makeSnow(canvas);
 	});
 })();
+
+function muteAudio() {
+	var audio = document.getElementById("bgMusic");
+	console.log(audio.muted);
+	audio.muted = !audio.muted;
+	var image = document.getElementById("muteButton");
+	if(audio.muted) {
+		image.src = "/assets/muted.png"
+	} else {
+		image.src = "/assets/unmuted.png"
+	}
+}

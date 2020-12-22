@@ -17,6 +17,27 @@ a:hover {
   text-decoration: underline;
 }
 
+.red {
+  color: #ff7c7c;
+}
+
+.light {
+  color: #c3e4e4;
+}
+
+.controlButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 14px;
+  width: 48px;
+  z-index: 100;
+}
+
+.controlButton:hover {
+  cursor: url("/assets/Cursor.png"), auto;
+}
+
 .main {
   width: 100%;
   min-height: 99vh;
@@ -56,12 +77,8 @@ a:hover {
   background-position: bottom;
   background-image: url("/assets/DarkTown.png"); */
 }
-
-.darkTown {
-  background-size: 100%;
-  background-repeat: repeat-x;
-  background-position: bottom;
-  background-image: url("/assets/DarkTown.png");
+.flashDark img {
+  bottom: 0;
 }
 
 @keyframes flash {
@@ -110,7 +127,7 @@ a:hover {
   letter-spacing: 0.1rem;
   margin: 0 0.1em 0.1em 0;
   border: 0.16em solid rgba(255, 255, 255, 0);
-  border-radius: 0.5em;
+  /* border-radius: 0.5em; */
   box-sizing: border-box;
 }
 
@@ -127,9 +144,23 @@ a:hover {
   color: #ff7c7c;
   background-color: #141414;
   text-decoration: none !important;
+  background-size: 300% 100%;
+
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .instagram {
-  background-color: #88202d;
+  /* background-color: #88202d; */
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #222222,
+    #1d1d1d,
+    #353535
+  );
+  box-shadow: 0 4px 15px 0 rgba(202, 110, 83, 0.75);
 }
 
 .facebook {
@@ -179,7 +210,7 @@ a:hover {
   display: flex;
   max-width: 100%;
   margin: auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .content {
@@ -193,7 +224,7 @@ a:hover {
   font-family: "ChristmasCardFont", Times, serif;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: #c3e4e4;
+
   /* text-shadow: 0px 2px 2px #1a1a1a; */
 }
 
@@ -217,7 +248,7 @@ a:hover {
   z-index: 45;
   font-size: 7rem;
   line-height: 0.5rem;
-  color: #ff7c7c;
+
   text-shadow: 0px 2px 2px #1a1a1a;
 }
 
@@ -234,11 +265,21 @@ a:hover {
   line-height: 2rem;
   margin-left: auto;
   margin-right: auto;
-  color: #c3e4e4;
   padding-bottom: 20px;
   padding-top: 20px;
 }
+.handDrawn {
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+}
 @media only screen and (max-width: 768px) {
+  .main {
+    background-size: auto 18%;
+    background-repeat: repeat-x;
+    background-position: right 0px bottom -50px;
+  }
   .subtitle {
     letter-spacing: 0.1em;
     color: #c3e4e4;
@@ -264,9 +305,9 @@ a:hover {
     padding: 0px 20px;
   }
   .poem {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 200;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     line-height: 1.6rem;
     margin-left: auto;
     margin-right: auto;
