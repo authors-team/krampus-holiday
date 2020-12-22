@@ -99,6 +99,7 @@
 
 function muteAudio() {
 	var audio = document.getElementById("bgMusic");
+	audio.play();
 	console.log(audio.muted);
 	audio.muted = !audio.muted;
 	var image = document.getElementById("muteButton");
