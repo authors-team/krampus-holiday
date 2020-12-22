@@ -5,7 +5,11 @@
 	};
 
 	// qrCode = document.getElementById('qrCode');
-
+	var audio = document.getElementById("bgMusic");
+	audio.muted = true;
+	audio.play();
+	audio.muted = false;
+	console.log("playing")
 
 	var fire1 = bodymovin.loadAnimation({
 		container: document.getElementById("fire1"),
@@ -101,12 +105,12 @@
 	ready(function() {
 		var canvas = document.getElementById('snow');
 		makeSnow(canvas);
+		
 	});
 })();
 
 function muteAudio() {
 	var audio = document.getElementById("bgMusic");
-	audio.play();
 	console.log(audio.muted);
 	audio.muted = !audio.muted;
 	var image = document.getElementById("muteButton");
