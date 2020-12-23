@@ -6,6 +6,7 @@
 body {
   background: #141414;
   font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
 }
 
 a {
@@ -25,17 +26,98 @@ a:hover {
   color: #c3e4e4;
 }
 
-.controlButton {
+.helpDiv {
+  display: block;
+  position: fixed;
+  z-index: 150;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.helpContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 40px;
+  border: 0.16em solid;
+  border-color: #ff7c7c;
+  /* border-radius: 0.5em; */
+  box-sizing: border-box;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  box-shadow: 0 4px 15px 0 rgba(202, 110, 83, 0.75);
+  width: 30rem;
+  max-width: 80%;
+  background-image: linear-gradient(
+    to right,
+    #101316,
+    #222222,
+    #1d1d1d,
+    #181717
+  );
+}
+.helpText {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.helpContent h3 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-family: "ChristmasCardFont", Times, serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .helpContent {
+    padding: 20px;
+  }
+  .helpContent h3 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  .helpText {
+    font-size: 0.8rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+    line-height: 1.6rem;
+  }
+}
+
+.modalButtons {
+  display: flex;
+  flex-direction: row-reverse;
   position: absolute;
   top: 0;
   left: 0;
-  margin: 14px;
-  width: 48px;
+  width: 100%;
   z-index: 100;
+}
+.controlButtons {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.controlButton {
+  margin: 14px;
+  width: 36px;
 }
 
 .controlButton:hover {
-  cursor: url("/assets/Cursor.png"), auto;
+  cursor: url("/assets/Cursor.png"), auto !important;
 }
 
 .main {
@@ -61,15 +143,13 @@ a:hover {
 }
 
 .flashDark {
-  top: 0;
-  left: 0;
-  right: 0;
+  box-sizing: inherit;
   bottom: 0;
+  left: 0;
   z-index: -10;
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   /* background-color: #222222 ; */
   animation: flash 5s linear infinite;
   /* background-size: 60%;
@@ -77,8 +157,9 @@ a:hover {
   background-position: bottom;
   background-image: url("/assets/DarkTown.png"); */
 }
+
 .flashDark img {
-  bottom: 0;
+  max-width: 100%;
 }
 
 @keyframes flash {
@@ -120,7 +201,7 @@ a:hover {
 .qrCode img {
   max-width: 150px;
   margin: 0 0.1em 0.1em 0;
-  border: 0.16em solid rgba(255, 255, 255, 0);
+  border: 0.16em solid;
   border-color: #ff7c7c;
   /* border-radius: 0.5em; */
   box-sizing: border-box;

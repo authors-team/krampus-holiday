@@ -15,23 +15,61 @@
     <audio id="bgMusic" loop="true">
       <source src="/assets/Krampus Chill.mp3" type="audio/mp3" />
     </audio>
-
-    <img
-      src="/assets/muted.png"
-      onclick="playAudio();"
-      class="controlButton"
-      id="muteButton"
-      alt="mute the audio"
-    />
-    <div class="aboutButtons"></div>
+    <div class="controlButtons">
+      <img
+        src="/assets/muted.png"
+        onclick="playAudio();"
+        class="controlButton"
+        id="muteButton"
+        alt="mute the audio"
+      />
+      <img
+        src="/assets/question.png"
+        onclick="openHelp();"
+        class="controlButton"
+        id="helpButton"
+        alt="what the heck is going on here?"
+      />
+    </div>
+    <div id="helpDiv" class="helpDiv">
+      <div class="helpContent light">
+        <div class="modalButtons">
+          <img
+            src="/assets/close.png"
+            class="controlButton"
+            id="closeHelp"
+            onclick="closeHelp()"
+            alt="get this help outta here"
+          />
+        </div>
+        <h3 class="red">What's going on here?</h3>
+        <p class="helpText">
+          We wanted to experiment with our "holiday card" this year, so we
+          created a fun Krampus-themed Instagram filter for you to experience.
+        </p>
+        <p class="helpText">
+          Click the button or scan the QR code on your phone to try it out!
+        </p>
+        <h3 class="red">How do I scan a QR Code?</h3>
+        <p class="helpText">
+          On most modern smartphones, you can just open your camera and point it
+          at the screen. A link should pop up. Click that!
+        </p>
+        <h3 class="red">Who made this?</h3>
+        <p class="helpText">
+          We're
+          <a href="http://authors.company" target="_blank" rel="noreferrer"
+            >Authors</a
+          >, a creative agency for a better future.
+        </p>
+      </div>
+    </div>
     <div class="flashDark">
       <img
         src="/assets/ATH-017-Krampus-sillhoette-LARGE.png"
         class="krampusImg"
         alt="KRAMPUS SCARY BOO"
       />
-
-      <canvas class="darkScene" id="darkScene"></canvas>
     </div>
     <div class="main town">
       <canvas class="snow" id="snow"></canvas>

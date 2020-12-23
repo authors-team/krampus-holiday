@@ -125,3 +125,18 @@ function onVisibilityChange() {
 }
 
 document.addEventListener("visibilitychange", onVisibilityChange)
+var helpDiv = document.getElementById("helpDiv");
+
+function openHelp() {
+	helpDiv.style.display = "block";
+}
+
+function closeHelp() {
+	helpDiv.style.display = "none";
+}
+
+window.onclick = function(e) {
+	if(e.target == helpDiv){
+		helpDiv.style.display = "none";
+	}
+}
