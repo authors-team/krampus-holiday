@@ -114,6 +114,7 @@ a:hover {
 .controlButton {
   margin: 14px;
   width: 36px;
+  height: 36px;
 }
 
 .controlButton:hover {
@@ -394,7 +395,8 @@ a:hover {
 @media only screen and (max-width: 768px) {
   .controlButton {
     margin: 8px;
-    width: 32px;
+    width: 28px;
+    height: 28px;
     z-index: 100;
   }
   .main {
