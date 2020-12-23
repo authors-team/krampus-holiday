@@ -27,7 +27,7 @@ a:hover {
 }
 
 .helpDiv {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 150;
   left: 0;
